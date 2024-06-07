@@ -3,3 +3,5 @@ App_Start
 bin
 obj
 Properties
+lib
+Scripts

@@ -152,7 +152,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-	  <None Include="xml\*"/>
+    <None Include="xml\*" />
+    <Content Include=".gitignore" />
     <Content Include="App_Data\Eclat.mdf" />
     <Content Include="App_Data\Eclat_log.ldf">
       <DependentUpon>Eclat.mdf</DependentUpon>
@@ -493,7 +494,6 @@
   <ItemGroup>
     <Folder Include="Image\Ads\" />
     <Folder Include="Image\Product\" />
-	  <Folder Include="xml\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
