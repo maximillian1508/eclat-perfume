@@ -1,0 +1,89 @@
+﻿.first-home-container {
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .first-home-container a {
+        text-decoration: none;
+        width: fit-content;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+        .first-home-container a > img:last-child {
+            display: none;
+        }
+
+        .first-home-container a:hover > img:first-child {
+            display: none;
+        }
+
+        .first-home-container a:hover > img:last-child {
+            display: inline-block;
+        }
+
+.gender-container {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0.5rem 1rem 2rem;
+}
+
+    .gender-container > a.card {
+        text-decoration: none;
+        transition: transform linear 250ms
+    }
+
+        .gender-container > a.card:hover {
+            transform: rotate(-2deg);
+        }
+
+    .gender-container .card-img {
+        height: 100%;
+        width: 325px
+    }
+
+    .gender-container .card-img-overlay {
+        text-align: center;
+        display: flex
+    }
+
+    .gender-container h3.card-title {
+        font-size: 2.5rem;
+        color: white;
+        margin: auto auto;
+        font-weight: 700;
+        font-family: 'Manrope';
+        width: 90%;
+        border-radius: 10px
+    }
+
+.about-container {
+    border-radius: 35px;
+    width: 87.5%;
+    height: 450px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+    .about-container > img {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover
+    }
+
+    .about-container a {
+        cursor: pointer;
+        padding: 1.25rem;
+        margin: 0 auto;
+        border-radius: 5px;
+        font-size: 1.25rem;
+        font-weight: 500;
+        width: fit-content;
+    }

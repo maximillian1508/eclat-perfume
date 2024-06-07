@@ -1,0 +1,110 @@
+﻿.about {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+    align-items: center;
+}
+
+    .about > p.brand-name{
+        color: #5a5a5a;
+        font-size: 1.75rem;
+        margin: 1rem 0 0;
+        font-weight: 500;
+    }
+
+    .about > h1 {
+        margin: 0.75rem 0 1rem;
+        font-weight: 700;
+        font-size: 2rem;
+        font-family: 'Manrope'
+    }
+
+    .about > p.introduction {
+        width: 70%;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .about > img {
+        height: 400px;
+        width: 95%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        margin: 15px;
+    }
+
+    .about > p.body {
+        width: 95%;
+        text-align: justify;
+            font-weight: 500;
+            text-indent: 30px;
+            line-height: 1.75;
+    }
+
+    .about > .contact-card {
+        width: 100%;
+        border: solid grey 1px;
+        border-radius: 10px;
+        height: 300px;
+        margin: 0.75rem 0 5rem;
+        display: flex;
+    }
+
+        .about > .contact-card > div {
+            width: 50%;
+        }
+
+        .about > .contact-card > .social-media {
+            border-right: grey solid 1px;
+            padding: 15px;
+        }
+
+    .about .official-contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .about .official-contact > div {
+            height: 50%;
+            padding: 15px 15px 0;
+        }
+
+            .about .official-contact > div > p > a {
+                text-decoration: none;
+                color: black;
+            }
+
+                .about .official-contact > div > p > a:hover {
+                    color: #a2a2a2;
+                }
+
+
+
+        .about .official-contact > .email {
+            border-bottom: solid grey 1px;
+        }
+
+        .about .social-media > .socmed-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50%;
+        }
+
+        .about .social-media > .socmed-cont > a {
+            text-decoration: none;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .about .social-media > .socmed-cont > a > i {
+            font-size: 5em;
+            color: black;
+        }
+
+            .about .social-media > .socmed-cont > a > i:hover {
+                color: #a2a2a2;
+            }

@@ -1,0 +1,65 @@
+﻿.stores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+    .stores > h1 {
+        margin: 1rem 0 0;
+        font-weight: 700;
+        font-size: 2rem;
+        font-family: 'Manrope'
+    }
+
+.store-card {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 55vh;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+    .store-card > .left {
+        width: 30%;
+        height: 75%;
+        align-self: center;
+        text-align: center;
+        border-right: grey solid 2px;
+        display: flex;
+        align-items: center;
+    }
+
+        .store-card > .left > h2 {
+            font-size: 50px;
+            margin: 0 auto;
+        }
+
+    .store-card > .middle {
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 30%;
+        align-self: center;
+    }
+
+        .store-card > .middle > a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .store-card > .middle > a:hover {
+            color: grey;
+        }
+
+    .store-card > .right {
+        object-fit: cover;
+        border-radius: 10px;
+        aspect-ratio: 1/1;
+        width: 30%;
+        height: 100%;
+    }

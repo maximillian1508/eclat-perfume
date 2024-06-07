@@ -1,0 +1,263 @@
+﻿* {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+
+#form1 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+    #form1 > .main {
+        flex-grow: 1;
+    }
+
+.sticky-container {
+    height: 5.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    margin: auto auto 0;
+    background-color: #ffffff;
+    border: 1.5px solid black;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+    .navigation #logout {
+        border: none;
+        background-color: white;
+        padding: 0 1rem;
+        color: black;
+        font-weight: 500;
+    }
+
+        .navigation #logout:hover {
+            color: #7d7d7d;
+        }
+
+    .navigation > a, .navigation > .shop-dropdown {
+        text-decoration: none;
+        color: black;
+        width: auto;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        font-weight: 500;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    .navigation a:hover, .shop-dropdown:hover > a {
+        color: #7d7d7d;
+    }
+
+        .navigation a:hover i span {
+            opacity: 50%
+        }
+
+.shop-dropdown {
+    position: relative;
+}
+
+    .shop-dropdown a {
+        text-decoration: none;
+        color: black;
+        width: fit-content;
+    }
+
+    .shop-dropdown > a > i {
+        transition: transform linear 300ms;
+    }
+
+    .shop-dropdown:hover > a > i {
+        transform: rotate(180deg);
+    }
+
+    .shop-dropdown:hover > .shop-dropdown-menu {
+        display: grid;
+    }
+
+.shop-dropdown-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-0.5em, 100%);
+    background-color: white;
+    border-top: none;
+    border: 1.5px solid black;
+    border-radius: 0 0 10px 10px;
+    display: none;
+    width: 30vw;
+}
+
+
+.shop-dropdown-menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    cursor: default;
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.item3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.shop-dropdown-menu-item > h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.shop-dropdown-menu-item > a {
+    margin-bottom: 0.5rem;
+}
+
+
+.shop-dropdown-menu-item a:hover {
+    text-decoration: underline solid;
+}
+
+.footer {
+    background-color: black;
+    margin: 0 auto;
+    width: 100%;
+    height: 25rem;
+    display: flex;
+}
+
+.footer-container {
+    width: 50%;
+    display: flex;
+    color: #a1a1a1;
+    margin: 3rem 4rem 2rem;
+}
+
+.cont-right {
+    flex-direction: column;
+}
+
+.cont-left {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0;
+    gap: 4.5rem;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 0.4rem;
+}
+
+    .footer-nav > a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #a1a1a1;
+        width: fit-content
+    }
+
+        .footer-nav > a:hover {
+            color: #656464
+        }
+
+.copyright {
+    align-self: flex-end;
+    margin: 0;
+}
+
+.soc-med-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+    .soc-med-container > a {
+        width: fit-content;
+    }
+
+        .soc-med-container > a > i {
+            font-size: 2.5em;
+            color: #a1a1a1
+        }
+
+::placeholder {
+    color: #a1a1a1 !important;
+    opacity: 1;
+}
+
+.white-button {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border: solid 1px black;
+}
+
+    .white-button:hover {
+        background-color: #a1a1a1;
+        color: white;
+        border: none;
+    }
+
+.black-button {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+    .black-button:hover {
+        background-color: rgb(0 0 0 / 70%);
+    }
+
+.red-button {
+    border: 1px solid #FF4742;
+    color: white;
+    background-color: #FF4742;
+    text-decoration: none;
+}
+
+    .red-button:hover {
+        color: #FF4742;
+        background-color: white;
+    }
+
+
+
+.container-shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

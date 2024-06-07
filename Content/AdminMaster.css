@@ -1,0 +1,136 @@
+﻿.main {
+    margin-left: 100px;
+}
+
+.sidebar {
+    width: 100px;
+    position: fixed;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+    .sidebar hr {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .sidebar img {
+        width: 100%;
+        height: 30px;
+    }
+
+div.nav {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-content {
+    padding: 0.85rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+    .sidebar-content:hover {
+        background-color: #f2f2f2;
+    }
+
+        .sidebar-content:hover .sidebar-text {
+            display: inline;
+        }
+
+
+.sidebar-logo {
+    font-size: 30px;
+}
+
+.sidebar-text {
+    display: none;
+    background-color: black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: fit-content;
+    transform: translateY(-50%) translateX(105%);
+    white-space: nowrap;
+}
+
+.topbar {
+    width: calc(100vw - 125px);
+    margin-left: 100px;
+    padding: 1rem 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-dropdown {
+    position: relative;
+    transition: border-radius linear .3s;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    .admin-dropdown:hover {
+        background-color: #c5c5c5;
+        border-radius: 15px;
+    }
+
+    .admin-dropdown:hover > .admin-dropdown-menu {
+        display: flex;
+    }
+
+#admin_name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.admin-dropdown-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(10%, 48%);
+    background-color: white;
+    border-radius: 10px;
+    width: 12vw;
+    border: solid black 1px;
+    display: none;
+    flex-direction: column;
+}
+
+    .admin-dropdown-menu > * {
+        padding: 5px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .admin-dropdown-menu > *:hover{
+        background-color: #f2f2f2;
+    }
+
+    .admin-dropdown-menu > #logout {
+        border-top: solid grey 1px;
+        border-radius: 0 0 10px 10px;
+    }

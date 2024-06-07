@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="DECXML_Maximillian_Leonard.MasterPage.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Éclat Perfume</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/Image/WebContent/Eclat Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link href="../lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="../Content/AdminMaster.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #f2f2f2">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="sidebar">
+            <img src="../Image/WebContent/Eclat Title BG Removed.png" />
+            <hr />
+            <div class="nav">
+                <a href="dashboard" class="sidebar-content">
+                    <span class="fa-solid fa-table sidebar-logo"></span>
+                    <span class="sidebar-text">Dashboard</span>
+                </a>
+                <a href="manage-product" class="sidebar-content">
+                    <span class="fa-solid fa-spray-can-sparkles sidebar-logo"></span>
+                    <span class="sidebar-text">Manage Product</span>
+                </a>
+                <a href="manage-order" class="sidebar-content">
+                    <span class="fa-solid fa-file-invoice sidebar-logo"></span>
+                    <span class="sidebar-text">Manage Order</span>
+                </a>
+                <a href="manage-user" class="sidebar-content">
+                    <span class="fa-solid fa-user sidebar-logo"></span>
+                    <span class="sidebar-text">Manage User</span>
+                </a>
+                <a href="manage-ads" class="sidebar-content">
+                    <span class="fa-brands fa-adversal sidebar-logo"></span>
+                    <span class="sidebar-text">Manage Ads</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="topbar">
+            <div class="content">
+                <div class="greeting">
+                    <span id="greetings" runat="server" style="font-weight: 600"></span>
+                </div>
+                <div class="admin-dropdown">
+                    <span id="admin_name" runat="server"></span><i style="font-size: 16px; font-weight:bold;" class="ms-1 fa-solid fa-chevron-down"></i>
+                    <div class="admin-dropdown-menu">
+                        <a href="profile">Account <i class="ms-2 fa-solid fa-circle-user"></i></a>
+                        <asp:Button ID="logout" OnClick="logout_Click" runat="server" Text="LOG OUT" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>
+
